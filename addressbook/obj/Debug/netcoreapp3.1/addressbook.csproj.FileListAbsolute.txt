@@ -1,0 +1,13 @@
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.exe
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.deps.json
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.runtimeconfig.json
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.runtimeconfig.dev.json
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.dll
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\bin\Debug\netcoreapp3.1\addressbook.pdb
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.csproj.AssemblyReference.cache
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.AssemblyInfoInputs.cache
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.AssemblyInfo.cs
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.csproj.CoreCompileInputs.cache
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.dll
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.pdb
+C:\Users\Sahithi.P\source\repos\addressbook\addressbook\obj\Debug\netcoreapp3.1\addressbook.genruntimeconfig.cache
