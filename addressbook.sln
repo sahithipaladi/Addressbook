@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "addressbook", "addressbook\addressbook.csproj", "{DB0BAAA9-D9E4-4B06-B549-B868D3497525}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addressbook", "addressbook\Addressbook.csproj", "{DB0BAAA9-D9E4-4B06-B549-B868D3497525}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

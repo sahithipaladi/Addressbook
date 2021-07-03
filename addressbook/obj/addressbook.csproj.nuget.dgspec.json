@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\addressbook.csproj": {}
+    "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\Addressbook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\addressbook.csproj": {
+    "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\Addressbook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\addressbook.csproj",
-        "projectName": "addressbook",
-        "projectPath": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\addressbook.csproj",
+        "projectUniqueName": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\Addressbook.csproj",
+        "projectName": "Addressbook",
+        "projectPath": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\Addressbook.csproj",
         "packagesPath": "C:\\Users\\Sahithi.P\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\obj\\",
         "projectStyle": "PackageReference",

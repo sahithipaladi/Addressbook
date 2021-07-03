@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace addressbook
+
+namespace AddressBookSystem
 {
-    class contact
+    class Contact
     {
-            public string FirstName;
-            public string LastName;
-            public string Address;
-            public string City;
-            public string State;
-            public int Zip;
-            public long PhoneNumber;
-            public string Email;
-        }
+        // Contact details....
+        public string FirstName;
+        public string LastName;
+        public string Address;
+        public string City;
+        public string State;
+        public int Zip;
+        public long PhoneNumber;
+        public string Email;
+    }
+
 }
