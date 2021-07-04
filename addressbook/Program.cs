@@ -21,7 +21,8 @@ namespace AddressBookSystem
                 Console.WriteLine("\n Options");
                 Console.WriteLine(" 1. Add a new Contact");
                 Console.WriteLine(" 2.Edit Contact ");
-                Console.WriteLine(" 3.Number of Contacts");
+                Console.WriteLine(" 3.Delete Contact ");
+                Console.WriteLine(" 4.Number of Contacts");
                 Console.WriteLine(" 0.Exit ");
 
                 // Reads the Option.....
@@ -36,8 +37,10 @@ namespace AddressBookSystem
                         addressBook.Add_Contacts(contact);  // contact details is added to a List...
                         break;
                     case 2:
-                        Console.WriteLine("Enter the Phone Number of Contact you wish to Edit");
+                        //  PhoneNumber of Contact to be Edit is given as input.......
+                        Console.Write("Enter the Phone Number of Contact you wish to Edit : ");
                         long phoneNumber = long.Parse(Console.ReadLine());
+                        //Index of the Contact Object is given with the help of PhoneNumber......
                         int index = addressBook.FindByPhoneNumber((int)phoneNumber);
                         if (index == -1)
                         {
@@ -51,12 +54,32 @@ namespace AddressBookSystem
                             Console.WriteLine("Contact Updated Successfully");
                         }
                         break;
-                    case 0:
-                        stop = true;
-                        break;
+
                     case 3:
+                        //  First Name of Contact to be deleted is given as input.......
+                        Console.Write("Enter the First Name of Contact you wish to delete : ");
+                        string firstname = Console.ReadLine();
+                        // Index of the Contact Object is given with the help of FirstName......
+                        int contact_id = addressBook.FindByFirstName(firstname);
+                        if (contact_id == -1)
+                        {
+                            Console.WriteLine("\n No Contact Exists with Following First Name\n");
+                        }
+                        else
+                        {
+                            // method to delete the contact is called.....
+                            addressBook.DeleteContact(contact_id);
+                            Console.WriteLine("Contact Deleted Successfully");
+                        }
+                        break;
+
+                    case 4:
                         // Number of Contacts is give......(count)...
                         Console.WriteLine("\n Number of Contacts : " + addressBook.ContactList.Count);
+                        break;
+
+                    case 0:
+                        stop = true;
                         break;
                     default:
                         break;
