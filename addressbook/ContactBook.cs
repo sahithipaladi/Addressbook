@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace AddressBook
 {
     class ContactBook
-
     {
         public static int cnt = 0;
         //Creating list to add contact details

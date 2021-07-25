@@ -16,6 +16,7 @@ namespace AddressBook
         public long phonenumber;
         public string email;
 
+
         //Reading the contact details
         public void ReadInput()
         {
@@ -35,6 +36,11 @@ namespace AddressBook
             phonenumber = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Enter email id : ");
             email = Console.ReadLine();
+        }
+        //Display Contact Details.....
+        public static void DisplayContact(ContactDetails cd)
+        {
+            Console.WriteLine("Name : " + cd.firstName + " " + cd.lastName);
         }
     }
 }
