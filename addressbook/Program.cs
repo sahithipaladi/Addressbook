@@ -1,120 +1,112 @@
 ﻿using System;
 
-namespace AddressBookSystem
+
+namespace AddressBook
 {
-   
-        }
-namespace AddressBookSystem
-{
+
     class Program
     {
+        public static string bookName;
         static void Main(string[] args)
         {
-            Console.WriteLine(" Welcome to Address Book Program ");
+            Console.WriteLine("Welcome to Address Book");
+            ContactBook book = new ContactBook();
+            CreateContactBook ccb = new CreateContactBook();
+            bool end = false;
 
-            // Object of AdressBook is Created.....
-            AddressBook addressBook = new AddressBook();
-            bool stop = false;
-            while (!stop)
+            while (!end)
             {
-                // Obtions are Show to User.......
-                Console.WriteLine("\n Options");
-                Console.WriteLine(" 1. Add a new Contact");
-                Console.WriteLine(" 2.Edit Contact ");
-                Console.WriteLine(" 3.Delete Contact ");
-                Console.WriteLine(" 4.Number of Contacts");
-                Console.WriteLine(" 0.Exit ");
+                //choosing an address book
+                Console.WriteLine("Choose a contact book :");
+                bookName = Console.ReadLine();
 
-                // Reads the Option.....
-                Console.Write("\n Select Options : ");
+                bool result = ccb.FindByName(bookName);
+                if (result)
+                {
+                    Console.WriteLine("The book exists..");
+                }
+                else
+                {
+                    Console.WriteLine("Book does not exists. So creating that book");
+                    CreateContactBook.AddContactBook(bookName, book);
+                }
+
+                //Choosing option
+                Console.WriteLine("Choose an option to perform in " + bookName + " : ");
+                Console.WriteLine("1.Adding the contact details to Address Book");
+                Console.WriteLine("2.Edit the contact details");
+                Console.WriteLine("3.Delete the contact details");
+                Console.WriteLine("4.Number of contacts in address book");
+                Console.WriteLine("5.Exit");
+
                 int option = Convert.ToInt32(Console.ReadLine());
-
                 switch (option)
                 {
                     case 1:
-                        Contact contact = new Contact();   // New Contact Object is Created ....
-                        Read_Contact(contact);             //method is called for input of contact details....
-                        addressBook.Add_Contacts(contact);  // contact details is added to a List...
-                        break;
-                    case 2:
-                        //  PhoneNumber of Contact to be Edit is given as input.......
-                        Console.Write("Enter the Phone Number of Contact you wish to Edit : ");
-                        long phoneNumber = long.Parse(Console.ReadLine());
-                        //Index of the Contact Object is given with the help of PhoneNumber......
-                        int index = addressBook.FindByPhoneNumber((int)phoneNumber);
+                        //Adding contact details
+                        ContactDetails cd = new ContactDetails();
+                        Console.WriteLine("Enter a name :");
+                        string names = Console.ReadLine();
+                        int index = book.FindByName(names);
                         if (index == -1)
                         {
-                            Console.WriteLine("\n No Contact Exists With Following Phone Number\n");
+                            Console.WriteLine("The name with that contact does not exist so I am adding it....");
+                            cd.ReadInput();
+                            book.AddContact(cd);
+                            Console.WriteLine("Contact updated successfully in " + bookName);
                         }
                         else
                         {
-                            Contact contact2 = new Contact();
-                            Read_Contact(contact2);
-                            addressBook.ContactList[index] = contact2;
-                            Console.WriteLine("Contact Updated Successfully");
+                            Console.WriteLine("Contact already exists in " + bookName);
                         }
                         break;
-
+                    case 2:
+                        //Editing contact details
+                        Console.WriteLine("Enter the name of a contact you wish to edit in " + bookName + " : ");
+                        string name = Console.ReadLine();
+                        int index2 = book.FindByName(name);
+                        if (index2 == -1)
+                        {
+                            Console.WriteLine("No contact exists with that name..");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Contact exists. Now you can edit it..");
+                            ContactDetails cd2 = new ContactDetails();
+                            cd2.ReadInput();
+                            book.contactList[index2] = cd2;
+                            Console.WriteLine("Contact Details updated successfully in " + bookName);
+                        }
+                        break;
                     case 3:
-                        //  First Name of Contact to be deleted is given as input.......
-                        Console.Write("Enter the First Name of Contact you wish to delete : ");
+                        //Deleting contact details
+                        Console.WriteLine("Enter the first name of a contact you wish to delete in " + bookName + " : ");
                         string firstname = Console.ReadLine();
-                        // Index of the Contact Object is given with the help of FirstName......
-                        int contact_id = addressBook.FindByFirstName(firstname);
-                        if (contact_id == -1)
+                        int index3 = book.FindByName(firstname);
+                        if (index3 == -1)
                         {
-                            Console.WriteLine("\n No Contact Exists with Following First Name\n");
+                            Console.WriteLine("No contact exists with that name..");
                         }
                         else
                         {
-                            // method to delete the contact is called.....
-                            addressBook.DeleteContact(contact_id);
-                            Console.WriteLine("Contact Deleted Successfully");
+                            book.DeleteContact(index3);
+                            Console.WriteLine("Contact Details deleted successfully in " + bookName);
                         }
                         break;
-
                     case 4:
-                        // Number of Contacts is give......(count)...
-                        Console.WriteLine("\n Number of Contacts : " + addressBook.ContactList.Count);
+                        //Printing count of contacts
+                        Console.WriteLine("Count of contacts in " + bookName + " : " + ContactBook.cnt);
                         break;
-
-                    case 0:
-                        stop = true;
+                    case 5:
+                        //Exit
+                        end = true;
                         break;
                     default:
                         break;
                 }
             }
-
-        }
-
-        public static void Read_Contact(Contact contact)
-        {
-            // Contact details is Added.....
-            Console.Write("Enter the First Name : ");
-            contact.FirstName = Console.ReadLine();
-            Console.Write("Enter the Last Name : ");
-            contact.LastName = Console.ReadLine();
-            Console.Write("Enter the Address : ");
-            contact.Address = Console.ReadLine();
-            Console.Write("Enter the City Name : ");
-            contact.City = Console.ReadLine();
-            Console.Write("Enter the State Name : ");
-            contact.State = Console.ReadLine();
-            Console.Write("Enter the zip code : ");
-            contact.Zip = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the Phone Number : ");
-            contact.PhoneNumber = long.Parse(Console.ReadLine());
-            Console.Write("Enter the email address : ");
-            contact.Email = Console.ReadLine();
+            //Printing count of contact books
+            Console.WriteLine("Number of contact books : " + CreateContactBook.count);
         }
     }
 }
-
-
-
-
-
-
-
-
