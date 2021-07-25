@@ -21,7 +21,7 @@ namespace AddressBook
             int option;
             while (!end)
             {
-                Console.WriteLine("1.Add contack book\n2.Work with exisiting contact book\n3.View contact by city or state");
+                Console.WriteLine("1.Add contack book\n2.Work with exisiting contact book\n3.View contact by city or state\n4.Count of contacts in city or state");
                 Console.WriteLine("Choose an option");
                 option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -52,6 +52,10 @@ namespace AddressBook
                         //View the contact by city name or state name
                         ViewContactByCityOrState();
                         break;
+                    case 4:
+                        CountPersonByCityOrState();
+                        break;
+
                 }
             }
         }
@@ -196,6 +200,28 @@ namespace AddressBook
                     {
                         ContactDetails.DisplayContact(contact);
                     }
+                    break;
+            }
+        }
+        //Count of contacts in a city or a state
+        public static void CountPersonByCityOrState()
+        {
+            Console.WriteLine(" 1.Count Number of Contacts in City \n 2.Count Number of Contacts in State");
+            Console.Write("\n Select Options : ");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    Console.Write("Enter the city name : ");
+                    string cityName = Console.ReadLine();
+                    List<ContactDetails> cityContact = CityWiseContacts[cityName];
+                    Console.WriteLine("\n Number of Contacts in the " + cityName + " City : " + cityContact.Count);
+                    break;
+                case 2:
+                    Console.Write(" Enter the state name : ");
+                    string stateName = Console.ReadLine();
+                    List<ContactDetails> stateContact = StateWiseContacts[stateName];
+                    Console.WriteLine("\n Number of Contacts in the " + stateName + " State : " + stateContact.Count);
                     break;
             }
         }
