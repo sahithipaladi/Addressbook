@@ -48,5 +48,9 @@ namespace AddressBook
             Console.WriteLine("PhoneNumber : " + cd.phonenumber);
             Console.WriteLine("Email : " + cd.email);
         }
+        public override string ToString()
+        {
+            return $"Name : {firstName} {lastName} \nAddress : {address} \nCity : {city} \nState : {state} \nZip : {zipcode} \nPhone : {phonenumber} \nEmail : {email}";
+        }
     }
 }

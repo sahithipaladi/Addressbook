@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AddressBook
@@ -35,6 +36,11 @@ namespace AddressBook
         public void DeleteContact(int index)
         {
             contactList.RemoveAt(index);
+        }
+        //Sort by First name
+        public List<ContactDetails> SortByFirstName()
+        {
+            return this.contactList.OrderBy(cd => cd.firstName).ToList();
         }
     }
 }
