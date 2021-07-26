@@ -42,5 +42,20 @@ namespace AddressBook
         {
             return this.contactList.OrderBy(cd => cd.firstName).ToList();
         }
+        //Sort by City
+        public List<ContactDetails> SortByCity()
+        {
+            return this.contactList.OrderBy(cd => cd.city).ToList();
+        }
+        //Sort by state
+        public List<ContactDetails> SortByState()
+        {
+            return this.contactList.OrderBy(cd => cd.state).ToList();
+        }
+        //Sort by Zipcode
+        public List<ContactDetails> SortByZipCode()
+        {
+            return this.contactList.OrderBy(cd => cd.zipcode).ToList();
+        }
     }
 }
