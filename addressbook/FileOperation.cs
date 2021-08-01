@@ -52,5 +52,18 @@ namespace AddressBook
                 }
             }
         }
+        //Read Or Write into Json File
+        public static void ReadFromJSONFile(string bookName)
+        {
+            string filePath = $"D://tvstraining//AddressBook//AddressBook//JSONFile//{bookName}.json";
+            string lines = File.ReadAllText(filePath);
+            Console.WriteLine(lines);
+        }
+        public static void WriteIntoJSONFile(string bookName, ContactBook contactBook)
+        {
+            string path = ($"D://tvstraining//AddressBook//AddressBook//JSONFile//{bookName}.json");
+            string res = JsonConvert.SerializeObject(contactBook.contactList);
+            File.WriteAllText(path, res);
+        }
     }
 }
