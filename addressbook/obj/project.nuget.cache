@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+rLnAj6EYiQn78I/kuigHlvaNPOGMZ4nMKzQTB1jt9nMsgi2cEztj61Nr5DiYyzDgl8WyOA0S0yWMhJ48caMEA==",
+  "dgSpecHash": "fQvnjf4CJO64Exglzbbp2EanMcF5he+4406Fvd3v04v6JaLQd+YICGhIMKchVk2FvebxjdxGZ94OXI0IAQaogg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sahithi.P\\source\\repos\\addressbook\\addressbook\\Addressbook.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Sahithi.P\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
+    "C:\\Users\\Sahithi.P\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sahithi.P\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
